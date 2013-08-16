@@ -1,0 +1,25 @@
+1. Download Data
+
+cd /tmp
+curl --silent https://raw.github.com/ronaldbradford/cleandata/master/data/license.csv > license.csv
+
+2. Create Necessary MySQL Table
+
+DROP TABLE IF EXISTS license;
+CREATE TABLE license (
+  license_id         VARCHAR(5) NOT NULL,
+  name               VARCHAR(100) NOT NULL,
+  url                VARCHAR(100) NOT NULL,
+  PRIMARY KEY(license_id)
+) ENGINE=InnoDB;
+
+3. Load Data
+
+SET SESSION sql_mode='STRICT_ALL_TABLES';
+LOAD DATA LOCAL INFILE '/tmp/license.csv'
+INTO TABLE license
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+(license_id,name,url);
+SHOW WARNINGS;
+SELECT * FROM license;
