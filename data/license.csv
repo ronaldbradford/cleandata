@@ -1,0 +1,14 @@
+FREE,Free for personal use,http://en.wikipedia.org/wiki/License-free_software
+PUB,Public Domain,http://en.wikipedia.org/wiki/Public_domain
+GPLV2,General Public License v2,http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+GPLV3,General Public License v2,http://www.gnu.org/licenses/gpl.html
+MIT,The MIT License (MIT,http://opensource.org/licenses/MIT)
+BSD,Berkeley Software Distribution (BSD License,http://en.wikipedia.org/wiki/BSD_licenses)
+NBSD,New BSD License/Modified BSD License (3 clause,http://opensource.org/licenses/BSD-3-Clause)
+SBSD,Simplified BSD License/FreeBSD License (2 clause,http://opensource.org/licenses/BSD-2-Clause)
+AP2,Apacdhe 2.0,http://opensource.org/licenses/Apache-2.0
+CC,Creative Commons,http://wiki.creativecommons.org/CC0
+UNKN,Unknown,http://en.wikipedia.org/wiki/Unknown,
+ECLP,Eclipse Public License,http://opensource.org/licenses/EPL-1.0
+COPY,Copyright,http://en.wikipedia.org/wiki/Copyright
+AFL,Academic Free License (AFL) v 3.0,http://opensource.org/licenses/AFL-3.0
