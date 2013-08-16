@@ -1,0 +1,29 @@
+To load format.csv into MySQL.
+
+
+1. Download Data
+
+cd /tmp
+curl --silent https://raw.github.com/ronaldbradford/cleandata/master/data/format.csv > format.csv
+
+2. Create Necessary MySQL Table
+
+DROP TABLE IF EXISTS format;
+CREATE TABLE format (
+  format_id          VARCHAR(5) NOT NULL,
+  name               VARCHAR(100) NOT NULL,
+  url                VARCHAR(100) NOT NULL,
+  PRIMARY KEY(format_id)
+) ENGINE=InnoDB;
+
+
+3. Load Data
+
+SET SESSION sql_mode='STRICT_ALL_TABLES';
+LOAD DATA LOCAL INFILE '/tmp/format.csv'
+INTO TABLE format
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+(format_id,name,url);
+SHOW WARNINGS;
+SELECT * FROM format;
